@@ -48,19 +48,33 @@ export default function Header() {
               className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
               aria-label="Toggle dark mode"
             >
-              {isDarkMode ? (
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <div className="relative">
+                {/* Sun icon - always rendered but conditionally visible */}
+                <svg 
+                  className={`h-5 w-5 transition-opacity duration-300 absolute ${isDarkMode ? 'opacity-0' : 'opacity-100'}`} 
+                  fill="currentColor" 
+                  viewBox="0 0 20 20"
+                  aria-hidden={isDarkMode ? "true" : "false"}
+                >
+                  <path 
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" 
+                  />
+                </svg>
+                
+                {/* Moon icon - always rendered but conditionally visible */}
+                <svg 
+                  className={`h-5 w-5 transition-opacity duration-300 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`} 
+                  fill="currentColor" 
+                  viewBox="0 0 20 20"
+                  aria-hidden={isDarkMode ? "false" : "true"}
+                >
                   <path
                     fillRule="evenodd"
                     d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"
                     clipRule="evenodd"
                   />
                 </svg>
-              ) : (
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                </svg>
-              )}
+              </div>
             </button>
 
             {/* Mobile menu button */}
