@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import Image from 'next/image';
 
 // Sample project data
 const projects = [
