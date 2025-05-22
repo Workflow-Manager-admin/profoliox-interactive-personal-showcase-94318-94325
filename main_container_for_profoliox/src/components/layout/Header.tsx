@@ -53,39 +53,8 @@ export default function Header() {
 
           {/* Right side actions */}
           <div className="flex items-center">
-            {/* Dark mode toggle - Only render icons when component is mounted to prevent hydration issues */}
-            <button 
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
-              aria-label="Toggle dark mode"
-            >
-              {isMounted ? (
-                <div className="relative w-5 h-5">
-                  {/* Both icons are in the DOM but opacity controlled by state */}
-                  <svg 
-                    className={`w-5 h-5 absolute inset-0 transition-opacity duration-300 ${isDarkMode ? 'opacity-0' : 'opacity-100'}`}
-                    fill="currentColor" 
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                  </svg>
-                  <svg 
-                    className={`w-5 h-5 absolute inset-0 transition-opacity duration-300 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`}
-                    fill="currentColor" 
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              ) : (
-                // Placeholder during SSR to maintain layout
-                <div className="w-5 h-5" />
-              )}
-            </button>
+            {/* Dark mode toggle using isolated client component */}
+            <ThemeToggle />
 
             {/* Mobile menu button */}
             <div className="md:hidden ml-2">
