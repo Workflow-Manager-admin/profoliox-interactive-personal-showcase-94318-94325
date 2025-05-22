@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from '@/components/theme/ThemeProvider';
 
 // PUBLIC_INTERFACE
 /**
@@ -9,18 +12,7 @@ import Image from 'next/image';
  */
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  // Toggle dark mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    // Toggle the class on the document element
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
-  };
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm">
