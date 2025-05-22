@@ -62,10 +62,13 @@ export function initDarkMode(): void {
  * Toggle dark mode on/off
  */
 export function toggleDarkMode(): void {
-  // Check if currently in dark mode
-  const isDarkMode = document.documentElement.classList.contains('dark');
+  // Skip if not in browser environment (SSR)
+  if (!isBrowser) return;
   
-  if (isDarkMode) {
+  // Check if currently in dark mode
+  const darkModeActive = document.documentElement.classList.contains('dark');
+  
+  if (darkModeActive) {
     document.documentElement.classList.remove('dark');
     localStorage.setItem('theme', 'light');
   } else {
@@ -78,5 +81,8 @@ export function toggleDarkMode(): void {
  * Check if dark mode is currently active
  */
 export function isDarkMode(): boolean {
+  // Return default false if not in browser environment (SSR)
+  if (!isBrowser) return false;
+  
   return document.documentElement.classList.contains('dark');
 }
