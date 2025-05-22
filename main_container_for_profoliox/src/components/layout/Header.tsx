@@ -19,6 +19,9 @@ export default function Header() {
   // Set mounted state after hydration is complete
   useEffect(() => {
     setIsMounted(true);
+    
+    // Just demonstrating our utility function
+    console.log('Current date:', formatDate(new Date()));
   }, []);
 
   return (
