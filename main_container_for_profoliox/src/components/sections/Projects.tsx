@@ -49,7 +49,7 @@ export default function Projects() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">My Projects</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here's a selection of my recent work. Each project presented unique challenges and opportunities for growth.
+            Here&apos;s a selection of my recent work. Each project presented unique challenges and opportunities for growth.
           </p>
           <div className="h-1 w-24 bg-indigo-600 mx-auto mt-4"></div>
         </div>
