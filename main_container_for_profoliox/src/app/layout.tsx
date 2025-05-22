@@ -37,9 +37,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-            {children}
-          </Suspense>
+          {children}
         </ThemeProvider>
       </body>
     </html>
