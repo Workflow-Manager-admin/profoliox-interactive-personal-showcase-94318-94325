@@ -13,3 +13,88 @@ You can learn more, including how to opt-out if you'd not like to participate in
 https://nextjs.org/telemetry
 
  ✓ Ready in 3.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 26.2s (744 modules)
+ ✓ Compiled in 1898ms (331 modules)
+ ✓ Compiled in 694ms (331 modules)
+ ✓ Compiled in 510ms (331 modules)
+ ✓ Compiled in 703ms (331 modules)
+ ✓ Compiled in 904ms (331 modules)
+ GET / 200 in 908ms
+ ✓ Compiled in 697ms (331 modules)
+ GET / 200 in 611ms
+ ✓ Compiled in 692ms (331 modules)
+ GET / 200 in 700ms
+ ✓ Compiled in 597ms (331 modules)
+ GET / 200 in 792ms
+ ⚠ Blocked cross-origin request from vscode-internal-493368-beta.beta01.cloud.kavia.ai. To allow this, configure "allowedDevOrigins" in next.config
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 813ms
+ ✓ Compiled in 809ms (331 modules)
+ ✓ Compiled in 887ms (331 modules)
+ GET / 200 in 900ms
+ ✓ Compiled in 493ms (331 modules)
+ ✓ Compiled in 598ms (331 modules)
+ ✓ Compiled in 519ms (331 modules)
+ ✓ Compiled in 506ms (331 modules)
+ ✓ Compiled in 394ms (331 modules)
+ ✓ Compiled in 406ms (331 modules)
+ ✓ Compiled in 411ms (331 modules)
+ GET / 200 in 511ms
+ ✓ Compiled in 478ms (331 modules)
+ GET / 200 in 516ms
+ ✓ Compiled in 513ms (331 modules)
+ ✓ Compiled in 385ms (331 modules)
+ ✓ Compiled in 315ms (331 modules)
+ GET / 200 in 593ms
+ ✓ Compiled in 493ms (331 modules)
+ GET / 200 in 697ms
+ GET / 200 in 597ms
+ ✓ Compiled in 595ms (331 modules)
+ GET / 200 in 412ms
+ ✓ Compiled in 492ms (331 modules)
+ ✓ Compiled in 510ms (331 modules)
+ ✓ Compiled in 503ms (331 modules)
+ ✓ Compiled in 710ms (331 modules)
+ ✓ Compiled in 400ms (331 modules)
+ ✓ Compiled in 391ms (331 modules)
+ ✓ Compiled in 405ms (331 modules)
+ ✓ Compiled in 486ms (331 modules)
+ ✓ Compiled in 389ms (331 modules)
+ ✓ Compiled in 395ms (331 modules)
+ ✓ Compiled in 499ms (331 modules)
+ ✓ Compiled in 302ms (331 modules)
+ ✓ Compiled in 393ms (331 modules)
+ ✓ Compiled in 305ms (331 modules)
+ ✓ Compiled in 320ms (331 modules)
+ ✓ Compiled in 408ms (331 modules)
+ ✓ Compiled in 491ms (331 modules)
+ ✓ Compiled in 397ms (331 modules)
+ ✓ Compiled in 396ms (331 modules)
+ ✓ Compiled in 315ms (331 modules)
+ ✓ Compiled in 304ms (331 modules)
+ ✓ Compiled in 376ms (331 modules)
+ ✓ Compiled in 395ms (331 modules)
+ ✓ Compiled in 328ms (331 modules)
+ ✓ Compiled in 369ms (331 modules)
+ ✓ Compiled in 396ms (331 modules)
+ ✓ Compiled in 597ms (331 modules)
+ ✓ Compiled in 304ms (331 modules)
+ ✓ Compiled in 414ms (331 modules)
+ ✓ Compiled in 390ms (331 modules)
+ ✓ Compiled in 405ms (331 modules)
+ ✓ Compiled in 482ms (331 modules)
+ ✓ Compiled in 315ms (331 modules)
+ ✓ Compiled in 386ms (331 modules)
+ ✓ Compiled in 398ms (331 modules)
+ ✓ Compiled in 407ms (331 modules)
+ ✓ Compiled in 402ms (331 modules)
+ ✓ Compiled in 321ms (331 modules)
+ ✓ Compiled in 582ms (331 modules)
+ ✓ Compiled in 501ms (331 modules)
+ ✓ Compiled in 398ms (331 modules)
+ ✓ Compiled in 1793ms (331 modules)
+ ✓ Compiled in 593ms (331 modules)
+ ✓ Compiled in 499ms (331 modules)
+ ✓ Compiled in 412ms (331 modules)
+ ✓ Compiled in 388ms (331 modules)
