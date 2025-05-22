@@ -11,9 +11,10 @@ import { useTheme } from '@/components/theme/ThemeProvider';
  * Includes logo, navigation menu, and theme toggle functionality.
  */
 export default function Header() {
-  // Use null as initial state to avoid hydration mismatches
+  // Use stable state values to avoid hydration mismatches
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const menuId = React.useMemo(() => generateId(), []);
   const { isDarkMode, toggleDarkMode } = useTheme();
   
   // Set mounted state after hydration is complete
