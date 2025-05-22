@@ -54,7 +54,7 @@ export default function Header() {
                   className={`h-5 w-5 transition-opacity duration-300 absolute ${isDarkMode ? 'opacity-0' : 'opacity-100'}`} 
                   fill="currentColor" 
                   viewBox="0 0 20 20"
-                  aria-hidden={isDarkMode ? "true" : "false"}
+                  aria-hidden={isDarkMode ? true : false}
                 >
                   <path 
                     d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" 
