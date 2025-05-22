@@ -85,35 +85,40 @@ export default function Header() {
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
-                {/* Icon for menu toggle */}
-                <svg
-                  className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-                <svg
-                  className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                {/* Container for menu icons with absolute positioning to stack them */}
+                <div className="relative">
+                  {/* Hamburger icon - always rendered, conditionally visible */}
+                  <svg
+                    className={`h-6 w-6 transition-opacity duration-200 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden={isMenuOpen ? "true" : "false"}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                  
+                  {/* Close icon - always rendered, conditionally visible */}
+                  <svg
+                    className={`h-6 w-6 absolute top-0 left-0 transition-opacity duration-200 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden={isMenuOpen ? "false" : "true"}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
               </button>
             </div>
           </div>
