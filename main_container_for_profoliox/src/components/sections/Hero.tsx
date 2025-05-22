@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 md:pr-12 text-center md:text-left mb-10 md:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Hello, I'm <span className="text-yellow-300">Jane Doe</span>
+            Hello, I&apos;m <span className="text-yellow-300">Jane Doe</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6">
             Full Stack Developer & UX Designer
