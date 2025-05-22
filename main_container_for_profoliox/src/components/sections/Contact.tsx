@@ -142,7 +142,7 @@ export default function Contact() {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-900 rounded-md">
                 <p className="text-green-700 dark:text-green-300">
-                  Thank you for your message! I'll get back to you as soon as possible.
+                  Thank you for your message! I&apos;ll get back to you as soon as possible.
                 </p>
               </div>
             )}
