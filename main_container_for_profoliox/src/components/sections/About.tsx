@@ -39,7 +39,7 @@ export default function About() {
               Jane Doe
             </h3>
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6">
-              I'm a passionate Full Stack Developer based in San Francisco with over 5 years of experience building web and mobile applications. 
+              I&apos;m a passionate Full Stack Developer based in San Francisco with over 5 years of experience building web and mobile applications. 
               I specialize in creating efficient, scalable, and user-friendly solutions that address real-world problems.
             </p>
             
