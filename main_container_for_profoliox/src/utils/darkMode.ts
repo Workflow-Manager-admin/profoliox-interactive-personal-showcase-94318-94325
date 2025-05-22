@@ -1,10 +1,18 @@
 // Helper functions for managing dark mode
 
 /**
+ * Check if code is running in browser environment
+ */
+const isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
+
+/**
  * Initialize dark mode detection and setup
  * This function should be called in a useEffect on the client side
  */
 export function initDarkMode(): void {
+  // Skip if not in browser environment (SSR)
+  if (!isBrowser) return;
+  
   // Check for user preference in localStorage
   const savedTheme = localStorage.getItem('theme');
   
@@ -19,15 +27,35 @@ export function initDarkMode(): void {
   }
   
   // Listen for changes in system preference
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    if (!localStorage.getItem('theme')) {
-      if (e.matches) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+  try {
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Use the modern approach first (addEventListener)
+    if (typeof darkModeMediaQuery.addEventListener === 'function') {
+      darkModeMediaQuery.addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) {
+          if (e.matches) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+      });
+    } else {
+      // Fallback for older browsers
+      darkModeMediaQuery.addListener(e => {
+        if (!localStorage.getItem('theme')) {
+          if (e.matches) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+      });
     }
-  });
+  } catch (e) {
+    console.error('Error setting up dark mode listener:', e);
+  }
 }
 
 /**
