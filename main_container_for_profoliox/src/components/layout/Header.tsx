@@ -66,7 +66,7 @@ export default function Header() {
                   className={`h-5 w-5 transition-opacity duration-300 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`} 
                   fill="currentColor" 
                   viewBox="0 0 20 20"
-                  aria-hidden={isDarkMode ? "false" : "true"}
+                  aria-hidden={isDarkMode ? false : true}
                 >
                   <path
                     fillRule="evenodd"
@@ -93,7 +93,7 @@ export default function Header() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    aria-hidden={isMenuOpen ? "true" : "false"}
+                    aria-hidden={isMenuOpen ? true : false}
                   >
                     <path
                       strokeLinecap="round"
