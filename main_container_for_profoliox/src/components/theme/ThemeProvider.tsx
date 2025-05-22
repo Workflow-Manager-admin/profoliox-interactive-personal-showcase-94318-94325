@@ -22,9 +22,8 @@ const ThemeContext = createContext<ThemeContextType>(defaultContextValue);
  * ThemeProvider component that provides theme context to child components
  */
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // State to track dark mode status - initialize to false and update in useEffect
-  // Using undefined as initial state to prevent hydration mismatches
-  const [darkMode, setDarkMode] = useState<boolean | undefined>(undefined);
+  // State to track dark mode status - initialize to false and update after mount
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
   // Initialize dark mode on client side
   useEffect(() => {
