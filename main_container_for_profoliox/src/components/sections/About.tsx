@@ -44,7 +44,7 @@ export default function About() {
             </p>
             
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8">
-              My journey in tech began when I built my first website at 15. Since then, I've worked with startups and established companies alike, 
+              My journey in tech began when I built my first website at 15. Since then, I&apos;ve worked with startups and established companies alike, 
               helping them bring their ideas to life through clean code and thoughtful design.
             </p>
             
