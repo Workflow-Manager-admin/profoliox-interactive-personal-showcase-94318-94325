@@ -9,7 +9,13 @@ type ThemeContextType = {
   toggleDarkMode: () => void;
 };
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+// Create initial context value with defaults
+const defaultContextValue: ThemeContextType = {
+  isDarkMode: false,
+  toggleDarkMode: () => {}
+};
+
+const ThemeContext = createContext<ThemeContextType>(defaultContextValue);
 
 // PUBLIC_INTERFACE
 /**
