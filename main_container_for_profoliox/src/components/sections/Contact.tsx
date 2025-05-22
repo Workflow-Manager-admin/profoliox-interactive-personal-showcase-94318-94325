@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 // PUBLIC_INTERFACE
@@ -53,7 +55,7 @@ export default function Contact() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact Me</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you.
           </p>
           <div className="h-1 w-24 bg-indigo-600 mx-auto mt-4"></div>
         </div>
