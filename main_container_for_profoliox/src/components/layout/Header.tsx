@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { generateId } from '@/utils';
+import { formatDate } from '@/utils';
 import Link from 'next/link';
 import { useTheme } from '@/components/theme/ThemeProvider';
 
