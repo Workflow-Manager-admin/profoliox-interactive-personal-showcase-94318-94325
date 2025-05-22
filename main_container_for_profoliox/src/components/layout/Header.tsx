@@ -109,7 +109,7 @@ export default function Header() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    aria-hidden={isMenuOpen ? "false" : "true"}
+                    aria-hidden={isMenuOpen ? false : true}
                   >
                     <path
                       strokeLinecap="round"
