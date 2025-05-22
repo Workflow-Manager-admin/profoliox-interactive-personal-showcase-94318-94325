@@ -64,7 +64,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="md:col-span-2 bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
             
             <div className="space-y-6">
