@@ -49,7 +49,7 @@ export default function Header() {
               className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
               aria-label="Toggle dark mode"
             >
-              {darkMode ? (
+              {isDarkMode ? (
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
