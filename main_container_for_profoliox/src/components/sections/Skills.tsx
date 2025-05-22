@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 // Skill data organized by category
@@ -64,7 +66,7 @@ export default function Skills() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">My Skills</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here's a comprehensive overview of my technical skills and expertise levels in various technologies.
+            Here&apos;s a comprehensive overview of my technical skills and expertise levels in various technologies.
           </p>
           <div className="h-1 w-24 bg-indigo-600 mx-auto mt-4"></div>
         </div>
