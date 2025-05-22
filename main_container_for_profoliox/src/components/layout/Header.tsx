@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
 import { useTheme } from '@/components/theme/ThemeProvider';
 
 // PUBLIC_INTERFACE
