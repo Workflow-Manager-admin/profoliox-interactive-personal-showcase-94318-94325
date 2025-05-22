@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { formatDate } from '@/utils';
 import Link from 'next/link';
 import { useTheme } from '@/components/theme/ThemeProvider';
+import { formatDate } from '@/utils';
 
 // PUBLIC_INTERFACE
 /**
@@ -11,7 +11,7 @@ import { useTheme } from '@/components/theme/ThemeProvider';
  * Includes logo, navigation menu, and theme toggle functionality.
  */
 export default function Header() {
-  // Use stable state values to avoid hydration mismatches
+  // Use false as initial state for isMenuOpen to avoid hydration mismatches
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const { isDarkMode, toggleDarkMode } = useTheme();
@@ -19,10 +19,16 @@ export default function Header() {
   // Set mounted state after hydration is complete
   useEffect(() => {
     setIsMounted(true);
-    
-    // Just demonstrating our utility function
-    console.log('Current date:', formatDate(new Date()));
+    // Log current date using our utility function
+    console.log('Header mounted date:', formatDate(new Date()));
   }, []);
+
+  // Only toggle menu after mounting to prevent hydration issues
+  const toggleMenu = () => {
+    if (isMounted) {
+      setIsMenuOpen(prev => !prev);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm">
@@ -53,8 +59,44 @@ export default function Header() {
 
           {/* Right side actions */}
           <div className="flex items-center">
-            {/* Dark mode toggle using isolated client component */}
-            <ThemeToggle />
+            {/* Dark mode toggle - Only render icons when component is mounted to prevent hydration issues */}
+            <button 
+              onClick={toggleDarkMode}
+              className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
+              aria-label="Toggle dark mode"
+            >
+              <div className="relative w-5 h-5">
+                {/* Only render SVGs after client-side hydration */}
+                {isMounted ? (
+                  <>
+                    {/* Sun icon */}
+                    <svg 
+                      className={`w-5 h-5 absolute inset-0 transition-opacity duration-300 ${isDarkMode ? 'opacity-0' : 'opacity-100'}`}
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                    
+                    {/* Moon icon */}
+                    <svg 
+                      className={`w-5 h-5 absolute inset-0 transition-opacity duration-300 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`}
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </>
+                ) : (
+                  // Empty div during SSR to prevent hydration mismatch
+                  <div className="w-5 h-5" />
+                )}
+              </div>
+            </button>
 
             {/* Mobile menu button */}
             <div className="md:hidden ml-2">
