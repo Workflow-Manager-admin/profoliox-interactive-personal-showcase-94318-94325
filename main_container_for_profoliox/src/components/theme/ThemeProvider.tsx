@@ -64,9 +64,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <ThemeContext.Provider
-      value={{ 
-        isDarkMode: darkMode ?? false, // Use false as fallback when undefined
-        toggleDarkMode: handleToggleDarkMode 
+      value={{
+        isDarkMode: darkMode === undefined ? false : darkMode,
+        toggleDarkMode: handleToggleDarkMode
       }}
     >
       {children}
